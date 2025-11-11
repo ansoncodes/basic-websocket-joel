@@ -1,0 +1,118 @@
+# =====================================
+# Python
+# =====================================
+__pycache__/
+*.py[cod]
+*$py.class
+
+# Distribution / packaging
+build/
+develop-eggs/
+dist/
+downloads/
+eggs/
+.eggs/
+lib/
+lib64/
+parts/
+sdist/
+var/
+*.egg-info/
+.installed.cfg
+*.egg
+
+# =====================================
+# Django Stuff
+# =====================================
+# SQLite database
+db.sqlite3
+db.sqlite3-journal
+
+# Django migrations (optional to ignore if auto-generated)
+*/migrations/__pycache__/
+*/migrations/*.pyc
+# Uncomment below line ONLY if you auto-generate migrations
+# */migrations/
+
+# Local settings
+local_settings.py
+settings_local.py
+
+# =====================================
+# Environment Variables
+# =====================================
+.env
+.env.*
+*.env
+.envrc
+# For pipenv / poetry
+Pipfile.lock
+poetry.lock
+
+# =====================================
+# IDE / Editors
+# =====================================
+.vscode/
+.idea/
+*.sublime-project
+*.sublime-workspace
+
+# =====================================
+# OS / System Files
+# =====================================
+.DS_Store
+Thumbs.db
+ehthumbs.db
+Icon?
+desktop.ini
+
+# =====================================
+# Logs & Cache
+# =====================================
+*.log
+*.pot
+*.pyc
+*.pyo
+*.pyd
+__pycache__/
+*.mo
+*.swp
+*.bak
+*.tmp
+
+# =====================================
+# Virtual Environment
+# =====================================
+venv/
+env/
+ENV/
+.venv/
+.virtualenv/
+Scripts/
+bin/
+Include/
+Lib/
+pyvenv.cfg
+
+# =====================================
+# Coverage / Testing
+# =====================================
+htmlcov/
+.tox/
+.nox/
+.coverage
+.coverage.*
+.cache
+nosetests.xml
+coverage.xml
+*.cover
+*.py,cover
+.hypothesis/
+.pytest_cache/
+
+# =====================================
+# Static & Media (generated)
+# =====================================
+staticfiles/
+media/
+static/

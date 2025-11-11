@@ -1,0 +1,39 @@
+<!DOCTYPE html>
+<html>
+<head>
+  <title>WebSocket Test</title>
+</head>
+<body>
+  <h2>Django Channels Chat</h2>
+  <input id="messageInput" type="text" placeholder="Type message..." />
+  <button id="sendBtn">Send</button>
+  <ul id="messages"></ul>
+
+  <script>
+    const socket = new WebSocket("ws://" + window.location.host + "/ws/chat/");
+
+    socket.onopen = function(e) {
+      
+    };
+
+    socket.onmessage = function(e) {
+      const data = JSON.parse(e.data);
+      const li = document.createElement("li");
+      li.textContent = data.message;
+      document.getElementById("messages").appendChild(li);
+    };
+
+    socket.onclose = function(e) {
+    };
+
+    document.getElementById("sendBtn").onclick = function() {
+      if (socket.readyState === WebSocket.OPEN) {
+        const message = document.getElementById("messageInput").value;
+        socket.send(JSON.stringify({ message }));
+      } else {
+        alert("WebSocket not connected!");
+      }
+    };
+  </script>
+</body>
+</html>
